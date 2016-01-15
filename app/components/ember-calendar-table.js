@@ -1,0 +1,1 @@
+export { default } from 'ember-calendar-table/components/ember-calendar-table';

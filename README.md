@@ -1,26 +1,21 @@
 # Ember-calendar-table
 
-This README outlines the details of collaborating on this Ember addon.
+[![npm version](https://badge.fury.io/js/ember-calendar-table.svg)](http://badge.fury.io/js/ember-calendar-table)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-calendar-table.svg)](http://emberobserver.com/addons/ember-calendar-table)
+
+This component provides a simple primative component for iterating over timeslots and days.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `ember install ember-calendar-table`
 
-## Running
+## Use
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+By default, the Ember Calendar Table component will make a one week swath of 7 days with working hours (9AM-5PM).
+It will yield `startTime` and `endTime` moment.js objects.
 
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```hbs
+{{#ember-calendar-table as |startTime endTime|}}
+  {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
+{{/ember-calendar-table}}
+```

@@ -1,0 +1,22 @@
+<thead>
+  <tr>
+    <th></th>
+    {{#each days as |day|}}
+      <th>{{moment-format day dayFormat}}</th>
+    {{/each}}
+  </tr>
+</thead>
+<tbody>
+  {{#each timeslots as |timeslot|}}
+    <tr>
+      <td>{{moment-format timeslot "hh:mm A"}}</td>
+      {{#each days as |day|}}
+        <td>
+          {{#with (moment-build day hour=(moment-format timeslot 'HH') minute=(moment-format timeslot 'mm') second=(moment-format timeslot 'ss')) as |start|}}
+            {{yield start (moment-add start slotDiff 'minute')}}
+          {{/with}}
+        </td>
+      {{/each}}
+    </tr>
+  {{/each}}
+</tbody>
