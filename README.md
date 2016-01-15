@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/ember-calendar-table.svg)](http://badge.fury.io/js/ember-calendar-table)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-calendar-table.svg)](http://emberobserver.com/addons/ember-calendar-table)
 
-This component provides a simple primative component for iterating over timeslots and days.
+This component provides a simple primitive component for iterating over timeslots and days as a table.
 
 ## Installation
 

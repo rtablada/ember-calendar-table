@@ -1,7 +1,7 @@
 {
   "name": "ember-calendar-table",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "This component provides a simple primitive component for iterating over timeslots and days as a table",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -42,7 +42,11 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "moment",
+    "calendar",
+    "component",
+    "week"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
